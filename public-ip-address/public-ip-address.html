@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    RED.nodes.registerType("public-ip-address", {
+        category: "function",
+        color: "#a6bbcf",
+        defaults: {
+            name: {value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "white-globe.svg",
+        label: function() {
+            return this.name || "Get Public IP";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="public-ip-address">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="public-ip-address">
+    <p>Get the current Public IP Address using the <a href="https://ipify.org">ipify.org API</a>.</p>
+    
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+        <dd>the IP address (IPv6 or IPv4)</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>The node performs a GET HTTP request to the ipify.org public API, on the IPv6/4 endpoint. This will return the public IPv6 address, if available; otherwise it will return the public IPv4 address.</p>
+</script>
