@@ -5,7 +5,10 @@
     "author": "David-Lor",
     "license": "ISC",
     "keywords": [
-        "node-red"
+        "node-red",
+        "ip-address",
+        "public-ip-address",
+        "ipify"
     ],
     "node-red": {
         "nodes": {
