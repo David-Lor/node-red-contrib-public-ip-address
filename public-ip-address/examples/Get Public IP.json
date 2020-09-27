@@ -1,0 +1,67 @@
+[
+    {
+        "id": "56eb02d3.3c869c",
+        "type": "tab",
+        "label": "GET Public IP",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2de9d3b0.23495c",
+        "type": "inject",
+        "z": "56eb02d3.3c869c",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "b8f686a5.4ae19"
+            ]
+        ]
+    },
+    {
+        "id": "d21e5b93.700fa",
+        "type": "debug",
+        "z": "56eb02d3.3c869c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b8f686a5.4ae19",
+        "type": "public-ip-address",
+        "z": "56eb02d3.3c869c",
+        "name": "",
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "d21e5b93.700fa"
+            ]
+        ]
+    }
+]
